@@ -1,6 +1,37 @@
+@keyframes animSquare
+{
+    to {
+        width: 200px;
+    }
+}
+
+@keyframes rotateSquare
+{
+    100% {
+        transform: rotate(360deg);
+        background-color: blue;
+    }
+}
+
+.container
+{
+    display: flex;
+    flex: 1 auto;
+    align-items: auto;
+    justify-content: center;
+    padding: 100px;
+}
+
 .square
 {
     width: 100px;
     height: 100px;
     background-color: red;
+    animation: rotateSquare 1s infinite;
 }
+
+.square:hover
+{
+    animation: animSquare 1s;
+}
+
